@@ -50,13 +50,10 @@ Next we insert some dummy data into into the users table.
 
 ## Running the tests
 
-//pic 1
 Say we want to retreive data with user_id = 100
-//pic2
-It fails to retreive data from the Redis Cache in the first try and tries to fetch data from Cassandra DB. We do experience some lag in the data retreival process.
-It then stores the result in Redis Cache with a Time-To-Live (TTL) = 5 seconds.
-//pic3
-When we try to retreive the same data again it returns the result relatively at a faster rate (now that it is the Redis cache)
+<br />It fails to retreive data from the Redis Cache in the first try and tries to fetch data from Cassandra DB. We do experience some lag in the data retreival process.
+<br />It then stores the result in Redis Cache with a Time-To-Live (TTL) = 5 seconds.
+<br />When we try to retreive the same data again it returns the result relatively at a faster rate (now that it is the Redis cache)
 
 ### Preventing common performance issues
 
